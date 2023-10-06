@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Tech Square",
+      "image": "https://i.ibb.co/Lz7wpMs/Tech-Square-Card-1.png",
+      "price": 29.99,
+      "short_description": "Talk with product experts, experience innovations in Tech Square. Catch up on new updates from Samsung platforms and OS like SmartThings, Knox and Tizen, Mobile & Screen Experience, Home & Health Experience, Sustainability.",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Creatively designed video editing",
+      "image": "https://i.ibb.co/9tPfT1y/gaming.jpg",
+      "price": 39.99,
+      "short_description": "A student is sitting at a creatively designed video editing",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product2"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Expo promoting artificial",
+      "image": "https://i.ibb.co/yPV4Hp9/ai-playground.jpg",
+      "price": 49.99,
+      "short_description": "generate an image for a technology expo promoting artificial intelligence and machine learning. The picture must have vibrant colors and chrome yellow and white theme",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product3"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Young students eagerly",
+      "image": "https://i.ibb.co/6BGjs8N/coding-for-clidren.jpg",
+      "price": 59.99,
+      "short_description": "An inspiring image that encapsulates young students eagerly exploring coding on sleek, modern computers. Visual references to a variety of coding languages, including Scratch or Python, could hint at the diverse coursework such as Pure Python and Mastering Halocode",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product4"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Business Workshop",
+      "image": "https://i.ibb.co/jWqPzMg/busines-workshop.jpg",
+      "price": 69.99,
+      "short_description": "Description of Product 5",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product5"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Digital Workshop",
+      "image": "https://i.ibb.co/QcMZNcx/digital-workshop.jpg",
+      "price": 79.99,
+      "short_description": "Description of Product 6",
+      "button": {
+        "text": "Add to Cart",
+        "action": "https://example.com/add-to-cart/product6"
+      }
+    }
+  ]
+}
