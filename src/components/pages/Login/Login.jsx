@@ -5,9 +5,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
 
   const notify = () => toast.success("Login Successfully!");
+  const notifyGoogle = (e) => toast.success(e);
+  const notifyGoogleError = (e) => toast.error(e);
   const notifyError = () => toast.error("Email or Password is invalid!");
 
   const handleLogin = (e) => {
@@ -26,6 +28,15 @@ const Login = () => {
         console.error(error);
         notifyError();
       });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((res) => {
+        notify();
+        notifyGoogle(res.user.displayName);
+      })
+      .catch((error) => notifyGoogleError(error.message));
   };
 
   return (
@@ -93,6 +104,13 @@ const Login = () => {
             </Link>
           </div>
         </form>
+        <div>
+          <button
+            className="btn bg-slate-950 btn-secondary"
+            onClick={handleGoogleLogin}>
+            Google
+          </button>
+        </div>
       </div>
       <ToastContainer />
     </div>
