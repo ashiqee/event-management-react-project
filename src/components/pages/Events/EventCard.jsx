@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const EventCard = ({ eventsData }) => {
-  console.log(eventsData);
   const { id, name, image, price, short_description } = eventsData;
 
   return (

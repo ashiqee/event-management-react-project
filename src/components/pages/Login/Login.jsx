@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+
+  const notify = () => toast.success("Login Successfully!");
+  const notifyError = () => toast.error("Email or Password is invalid!");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,8 +18,14 @@ const Login = () => {
     const password = form.get("password");
 
     signIn(email, password)
-      .then((res) => console.log(res.user))
-      .catch((error) => console.error(error));
+      .then((res) => {
+        console.log(res.user);
+        notify();
+      })
+      .catch((error) => {
+        console.error(error);
+        notifyError();
+      });
   };
 
   return (
@@ -66,8 +77,7 @@ const Login = () => {
             </div>
             <a
               href="#"
-              className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
-            >
+              className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">
               Lost Password?
             </a>
           </div>
@@ -78,13 +88,13 @@ const Login = () => {
             Not registered?{" "}
             <Link
               to="/register"
-              className="text-blue-700 hover:underline dark:text-blue-500"
-            >
+              className="text-blue-700 hover:underline dark:text-blue-500">
               Create account
             </Link>
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
