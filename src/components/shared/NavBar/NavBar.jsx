@@ -13,7 +13,7 @@ const NavBar = () => {
       </li>
 
       <li>
-        <NavLink to="/speaker">Speaker</NavLink>
+        <NavLink to="/speakers">Speaker</NavLink>
       </li>
       <li>
         <NavLink to="/about-us">About Us</NavLink>
@@ -33,7 +33,8 @@ const NavBar = () => {
                   className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="currentColor"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -44,11 +45,12 @@ const NavBar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-400 rounded-box w-52">
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-400 rounded-box w-52"
+              >
                 {navLinks}
               </ul>
             </div>
-            <a className="normal-case text-rose-400 text-4xl">TecH.e</a>
+            <a className="normal-case text-rose-400 text-5xl py-4">TecH.e</a>
           </div>
           <div className="navbar-center hidden lg:flex gap-5">
             <ul className="menu menu-horizontal px-1">{navLinks}</ul>

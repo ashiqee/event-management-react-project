@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Events from "../Events/Events";
 import AboutFea from "./AboutFea/AboutFea";
 import Banner from "./Banner/Banner";
+import Schedule from "./../Events/Schedule";
 
 const Home = () => {
   const data = useLoaderData();
@@ -17,6 +18,8 @@ const Home = () => {
         <AboutFea />
       </div>
       <Events events={events} />
+
+      <Schedule scheduleData={events} />
     </div>
   );
 };

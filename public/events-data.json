@@ -6,9 +6,15 @@
       "image": "https://i.ibb.co/Lz7wpMs/Tech-Square-Card-1.png",
       "price": 29.99,
       "short_description": "Talk with product experts, experience innovations in Tech Square. Catch up on new updates from Samsung platforms and OS like SmartThings, Knox and Tizen, Mobile & Screen Experience, Home & Health Experience, Sustainability.",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product1"
+      "speaker": {
+        "speaker_name": "Adam Leno",
+        "company": "Tech.e",
+        "profile_pic": "https://i.ibb.co/JrPy9XM/profile-1.jpg"
+      },
+      "schedule": {
+        "time": "08:30 - 09:30",
+        "place_onsite": "On-site",
+        "place_online": "Online"
       }
     },
     {
@@ -17,9 +23,15 @@
       "image": "https://i.ibb.co/9tPfT1y/gaming.jpg",
       "price": 39.99,
       "short_description": "A student is sitting at a creatively designed video editing",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product2"
+      "speaker": {
+        "speaker_name": "Lopez Kya",
+        "company": "Guru99",
+        "profile_pic": "https://i.ibb.co/xhH5S8P/profile-3.jpg"
+      },
+      "schedule": {
+        "time": "09:30 - 10:30",
+        "place_onsite": "On-site",
+        "place_online": "Online"
       }
     },
     {
@@ -28,20 +40,32 @@
       "image": "https://i.ibb.co/yPV4Hp9/ai-playground.jpg",
       "price": 49.99,
       "short_description": "generate an image for a technology expo promoting artificial intelligence and machine learning. The picture must have vibrant colors and chrome yellow and white theme",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product3"
+      "speaker": {
+        "speaker_name": "Anne Claire",
+        "company": "OpenAi",
+        "profile_pic": "https://i.ibb.co/0XmpbKj/profile-6.jpg"
+      },
+      "schedule": {
+        "time": "10:30 - 11:30",
+        "place_onsite": "On-site",
+        "place_online": "Online"
       }
     },
     {
       "id": 4,
-      "name": "Young students eagerly",
+      "name": "Young students eagerly coding",
       "image": "https://i.ibb.co/6BGjs8N/coding-for-clidren.jpg",
       "price": 59.99,
       "short_description": "An inspiring image that encapsulates young students eagerly exploring coding on sleek, modern computers. Visual references to a variety of coding languages, including Scratch or Python, could hint at the diverse coursework such as Pure Python and Mastering Halocode",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product4"
+      "speaker": {
+        "speaker_name": "James Bon",
+        "company": "Google",
+        "profile_pic": "https://i.ibb.co/6nd5BsY/Coding-Profile.jpg"
+      },
+      "schedule": {
+        "time": "11:30 - 12:30",
+        "place_onsite": "On-site",
+        "place_online": "Online"
       }
     },
     {
@@ -50,9 +74,14 @@
       "image": "https://i.ibb.co/jWqPzMg/busines-workshop.jpg",
       "price": 69.99,
       "short_description": "Description of Product 5",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product5"
+      "speaker": {
+        "speaker_name": "Kangwook",
+        "company": "Amazon",
+        "profile_pic": "https://i.ibb.co/qBjhkJC/profile-4.jpg"
+      },
+      "schedule": {
+        "time": "02:30 - 03:30",
+        "place_onsite": "On-site"
       }
     },
     {
@@ -61,9 +90,15 @@
       "image": "https://i.ibb.co/QcMZNcx/digital-workshop.jpg",
       "price": 79.99,
       "short_description": "Description of Product 6",
-      "button": {
-        "text": "Add to Cart",
-        "action": "https://example.com/add-to-cart/product6"
+      "speaker": {
+        "speaker_name": "Aaron Swift",
+        "company": "Microsoft",
+        "profile_pic": "https://i.ibb.co/FnYWjjP/Profile-2.jpg"
+      },
+      "schedule": {
+        "time": "03:30 - 04:30",
+        "place_onsite": "On-site",
+        "place_online": "Online"
       }
     }
   ]
