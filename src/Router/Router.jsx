@@ -7,11 +7,14 @@ import AboutUs from "../components/pages/AboutUs/AboutUs";
 import Speakers from "../components/pages/Events/Speakers";
 import Login from "../components/pages/Login/Login";
 import Register from "../components/pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../components/pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -24,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/Speakers",
-        element: <Speakers />,
+        element: (
+          <PrivateRoute>
+            <Speakers />
+          </PrivateRoute>
+        ),
         loader: () => fetch("/events-data.json"),
       },
       {
