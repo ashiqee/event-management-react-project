@@ -9,7 +9,7 @@ const Schedule = ({ scheduleData }) => {
         {" "}
         Our Session Schedule
       </h2>
-      <div className="grid grid-cols-1 gap-10">
+      <div className="grid grid-cols-1 mx-2 gap-10">
         {scheduleData?.map((data) => (
           <ScheduleCard key={data.id} scheduleData={data} />
         ))}

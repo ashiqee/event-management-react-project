@@ -4,7 +4,10 @@ import Footer from "../components/shared/NavBar/Footer";
 
 const Root = () => {
   return (
-    <div className="bg-base-200">
+    <div
+      className="bg-gradient-to-br from-pink-100 to-orange-100 hover:bg-gradient-to-bl focus:ring-4 
+    focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 "
+    >
       <div>
         <NavBar />
       </div>

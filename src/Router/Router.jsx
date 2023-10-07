@@ -5,6 +5,8 @@ import Events from "../components/pages/Events/Events";
 
 import AboutUs from "../components/pages/AboutUs/AboutUs";
 import Speakers from "../components/pages/Events/Speakers";
+import Login from "../components/pages/Login/Login";
+import Register from "../components/pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

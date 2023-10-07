@@ -73,9 +73,9 @@
       "name": "Business Workshop",
       "image": "https://i.ibb.co/jWqPzMg/busines-workshop.jpg",
       "price": 69.99,
-      "short_description": "Description of Product 5",
+      "short_description": "A workshop to show you how to write a Business Plan - focus on why you are writing it, the format/template and key messages in each section to include ",
       "speaker": {
-        "speaker_name": "Kangwook",
+        "speaker_name": "Kang Wook",
         "company": "Amazon",
         "profile_pic": "https://i.ibb.co/qBjhkJC/profile-4.jpg"
       },
@@ -89,7 +89,7 @@
       "name": "Digital Workshop",
       "image": "https://i.ibb.co/QcMZNcx/digital-workshop.jpg",
       "price": 79.99,
-      "short_description": "Description of Product 6",
+      "short_description": "Our digital features workshop is a first step to creating a website specification, user stories or a shared place of understanding for your stakeholders.",
       "speaker": {
         "speaker_name": "Aaron Swift",
         "company": "Microsoft",
