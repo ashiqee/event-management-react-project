@@ -8,10 +8,11 @@ const Banner = () => {
         src={bgVideo}
         autoPlay
         loop
-        muted
-      ></video>
+        muted></video>
 
-      <div className="relative  max-w-screen-xl mx-auto md:top-40 md:mt-20 md:flex items-center my-auto justify-between text-white ">
+      <div
+        data-aos="fade-up"
+        className="relative  max-w-screen-xl mx-auto md:top-40 md:mt-20 md:flex items-center my-auto justify-between text-white ">
         <div className="text-center">
           <p className=" text-2xl md:text-6xl md:mb-5">Biggest Tech Event</p>
           <h2 className="md:text-xl">Growing The Global Technology Industry</h2>
@@ -25,8 +26,7 @@ const Banner = () => {
 
           <button
             type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-          >
+            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
             Get Ticket
           </button>
         </div>

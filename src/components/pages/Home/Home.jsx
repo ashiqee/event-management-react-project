@@ -15,7 +15,7 @@ const Home = () => {
         <Banner />
       </div>
 
-      <div>
+      <div data-aos="fade-right">
         <AboutFea />
       </div>
       <Events events={events} />

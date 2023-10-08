@@ -8,7 +8,12 @@ const ScheduleCard = ({ scheduleData }) => {
   return (
     <div>
       <Link to={`/schedule/${id}`}>
-        <div className="card card-side bg-base-100 bg-gradient-to-br  from-blue-100 to-orange-300 shadow-xl">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="card card-side bg-base-100 bg-gradient-to-br from-blue-100
+          to-orange-300 shadow-xl">
           <div className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 text-center  h-full font-semibold rounded-lg text-2xl py-20 px-10 my-auto">
             {time}
           </div>
