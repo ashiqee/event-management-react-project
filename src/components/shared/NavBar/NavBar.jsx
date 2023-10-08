@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import logo from "../../../assets/video/logo.gif";
 
 const NavBar = () => {
   const { logOut, user } = useContext(AuthContext);
@@ -32,7 +33,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className=" hero-overlay relative  z-20  text-white ">
+      <div className=" bg-opacity-10 bg-slate-200 relative  z-20 font-semibold  text-rose-500 ">
         <div className="navbar max-w-screen-xl mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -42,7 +43,8 @@ const NavBar = () => {
                   className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="currentColor"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -53,29 +55,34 @@ const NavBar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-400 rounded-box w-52">
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  bg-gradient-to-br from-pink-50 to-orange-100
+                 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-box w-56"
+              >
                 {navLinks}
               </ul>
             </div>
             <a className="normal-case text-rose-400 text-5xl py-4">TecH.e</a>
+            <img className="w-12 h-12 rounded-full" src={logo} alt="" />
           </div>
-          <div className="navbar-center hidden lg:flex gap-5">
-            <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <div className="navbar-center  hidden lg:flex gap-5">
+            <ul className="menu menu-horizontal text-xl  px-1">{navLinks}</ul>
           </div>
           <div className="navbar-end">
             {user ? (
               <>
                 <div className="dropdown dropdown-end">
                   <label
-                    tabIndex={0}
-                    className="btn btn-ghost btn-circle avatar">
+                    tabIndex={-1}
+                    className="btn btn-ghost btn-circle avatar"
+                  >
                     <div className="w-10 rounded-full">
                       <img src={user.photoURL} />
                     </div>
                   </label>
                   <ul
                     tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-pink-100 rounded-box w-52">
+                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-pink-100 rounded-box w-60"
+                  >
                     <li>
                       <a className="justify-between mb-5 items-center">
                         <p className="text-2xl font-bold text-rose-600">
@@ -87,7 +94,8 @@ const NavBar = () => {
 
                     <Link
                       onClick={handleLogOut}
-                      className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                      className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    >
                       Log Out
                     </Link>
                   </ul>
@@ -97,7 +105,8 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                  className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
                   Login
                 </Link>
               </>
