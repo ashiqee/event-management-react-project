@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const ScheduleCard = ({ scheduleData }) => {
   const { time, place_onsite, place_online } = scheduleData.schedule;
   const { speaker_name, company, profile_pic } = scheduleData.speaker;
@@ -7,7 +7,7 @@ const ScheduleCard = ({ scheduleData }) => {
 
   return (
     <div>
-      <Link to={`/schedule/${id}`}>
+      <Link to={`/event/${id}`}>
         <div
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
@@ -22,14 +22,14 @@ const ScheduleCard = ({ scheduleData }) => {
             <br />
             <div className="md:flex mt-10 gap-5">
               {place_onsite ? (
-                <h2 className="p-2  mb-1 text-sm bg-opacity-50 bg-slate-200 rounded-lg">
+                <h2 className="p-2  mb-1 text-sm bg-opacity-50 bg-rose-200 rounded-lg">
                   {place_onsite}
                 </h2>
               ) : (
                 ""
               )}
               {place_online ? (
-                <h2 className="p-2  mb-1 bg-opacity-50 bg-slate-200 rounded-lg">
+                <h2 className="p-2  mb-1 bg-opacity-50 bg-rose-200 rounded-lg">
                   {place_online}
                 </h2>
               ) : (
@@ -59,3 +59,6 @@ const ScheduleCard = ({ scheduleData }) => {
 };
 
 export default ScheduleCard;
+ScheduleCard.propTypes = {
+  scheduleData: PropTypes.object,
+};

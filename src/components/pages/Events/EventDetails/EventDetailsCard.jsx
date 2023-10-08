@@ -1,9 +1,15 @@
 import PropTypes from "prop-types";
 
 const EventDetailsCard = ({ event }) => {
-  //   const { time, place_onsite, place_online } = event.schedule;
-
   const { name, image, price, short_description } = event;
+
+  if (!event) {
+    return <div>Loading...</div>;
+  }
+
+  const speakerName = event?.speaker?.speaker_name;
+  const company = event?.speaker?.company;
+  const profilePic = event?.speaker?.profile_pic;
 
   return (
     <div className="max-w-screen-xl md:mx-auto mx-2 ">
@@ -11,7 +17,7 @@ const EventDetailsCard = ({ event }) => {
         {name}
       </h2>
 
-      <div className="card my-5 mb-8 lg:card-side bg-opacity-40 bg-base-100 shadow-xl">
+      <div className="card my-5 mb-8 lg:card-side bg-opacity-40  shadow-xl">
         <figure>
           <img
             data-aos="zoom-in"
@@ -20,7 +26,7 @@ const EventDetailsCard = ({ event }) => {
             alt="Album"
           />
         </figure>
-        <div className="card-body md:w-96 mx-auto">
+        <div className="card-body md:w-[650px] mx-auto">
           <h2 className="card-title text-2xl font-extrabold text-rose-400">
             {price}$
           </h2>
@@ -29,23 +35,46 @@ const EventDetailsCard = ({ event }) => {
             {short_description}
           </p>
           <div className="flex">
-            <p className="text-2xl font-medium">
-              {/* December 27,2023 <br /> Time: {event.schedule.time} */}
+            <p className="text-xl font-medium">
+              December 27,2023 <br /> {event?.schedule?.time} <br />
+              <div className="md:flex mt-10 gap-5">
+                {event?.schedule?.place_onsite ? (
+                  <h2 className="p-2  mb-1  bg-opacity-50 bg-rose-200 rounded-lg">
+                    {event?.schedule?.place_onsite}
+                  </h2>
+                ) : (
+                  ""
+                )}
+                {event?.schedule?.place_online ? (
+                  <h2 className="p-2  mb-1 bg-opacity-50 bg-rose-200 rounded-lg">
+                    {event?.schedule?.place_online}
+                  </h2>
+                ) : (
+                  ""
+                )}
+              </div>
             </p>
-            <div>
-              <h2>{/* {event.speaker.speaker_name} */}</h2>
+            <div data-aos="zoom-in">
               <img
-                className="rounded-full w-40"
-                // src={event.speaker.profile_pic}
-                // alt={event.speaker.speaker_name}
+                className="rounded-t-full w-36"
+                src={profilePic}
+                alt={speakerName}
               />
+              <h2 className="text-lg font-bold text-center relative -top-7 bg-pink-400 text-white  bg-opacity-30">
+                {speakerName}
+                <br />
+                {company}
+              </h2>
             </div>
           </div>
 
-          <div className="card-actions justify-end">
+          <div className="card-actions items-center justify-between ">
             <button className="bg-gradient-to-br btn text-white from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
               Get Ticket
             </button>
+            <h3 className="text-xl shadow-2xl  rounded-b-lg px-10 p-3 font-semibold text-rose-400 ">
+              Speaker
+            </h3>
           </div>
         </div>
       </div>

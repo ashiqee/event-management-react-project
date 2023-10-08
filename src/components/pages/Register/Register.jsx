@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  // const { profileImg, setProfileImg } = useState();
 
   const notify = () => toast.success("Registration Successfully!");
   const notifyProfile = () => toast.success("Profile Updated Successfully!");
@@ -27,10 +28,18 @@ const Register = () => {
     const form = new FormData(e.currentTarget);
 
     const name = form.get("name");
-    const profile = form.get("profile");
+    const profilePic = form.get("profile");
     const email = form.get("email");
     const password = form.get("password");
     const accept = e.target.terms.checked;
+
+    // if (profilePic) {
+    //   setProfileImg(
+    //     "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+    //   );
+    // } else {
+    //   setProfileImg(profilePic);
+    // }
 
     if (password.length < 6) {
       notifyPassword();
@@ -43,7 +52,6 @@ const Register = () => {
         password
       )
     ) {
-      console.log("regula test");
       notifyPasswordSpecial();
       return;
     } else if (!accept) {
@@ -58,7 +66,7 @@ const Register = () => {
 
         updateProfile(res.user, {
           displayName: name,
-          photoURL: profile,
+          photoURL: profilePic,
         })
           .then(() => notifyProfile())
           .catch();
@@ -68,8 +76,8 @@ const Register = () => {
 
   return (
     <div>
-      <div className="my-28">
-        <div className="w-full max-w-sm p-4 bg-transparent mx-auto bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="my-16">
+        <div className="w-full max-w-sm p-4 bg-transparent mx-auto bg-opacity-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
           <form onSubmit={handleRegister} className="space-y-6" action="#">
             <h5 className="text-xl font-medium text-gray-900 dark:text-white">
               Register in to our platform

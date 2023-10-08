@@ -4,9 +4,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import logo from "../../../assets/video/logo.gif";
 
 const NavBar = () => {
-  const { logOut, user } = useContext(AuthContext);
-  console.log(user);
-
+  const { logOut, user, loading } = useContext(AuthContext);
+  if (loading) {
+    return <span className="loading  loading-ball loading-xs"></span>;
+  }
   const handleLogOut = () => {
     logOut()
       .then()
@@ -43,8 +44,7 @@ const NavBar = () => {
                   className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -56,8 +56,7 @@ const NavBar = () => {
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  bg-gradient-to-br from-pink-50 to-orange-100
-                 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-box w-56"
-              >
+                 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-box w-56">
                 {navLinks}
               </ul>
             </div>
@@ -73,16 +72,14 @@ const NavBar = () => {
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={-1}
-                    className="btn btn-ghost btn-circle avatar"
-                  >
+                    className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                       <img src={user.photoURL} />
                     </div>
                   </label>
                   <ul
                     tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-pink-100 rounded-box w-60"
-                  >
+                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-pink-100 rounded-box w-60">
                     <li>
                       <a className="justify-between mb-5 items-center">
                         <p className="text-2xl font-bold text-rose-600">
@@ -94,8 +91,7 @@ const NavBar = () => {
 
                     <Link
                       onClick={handleLogOut}
-                      className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                    >
+                      className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                       Log Out
                     </Link>
                   </ul>
@@ -105,8 +101,7 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                >
+                  className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                   Login
                 </Link>
               </>

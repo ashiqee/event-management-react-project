@@ -4,6 +4,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { FcGoogle } from "react-icons/Fc";
+
 const Login = () => {
   const { signIn, googleLogin } = useContext(AuthContext);
 
@@ -40,8 +42,8 @@ const Login = () => {
   };
 
   return (
-    <div className="my-44">
-      <div className="w-full max-w-sm p-4 bg-transparent mx-auto bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="my-20">
+      <div className="w-full max-w-sm p-4 bg-transparent mx-auto bg-opacity-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
         <form onSubmit={handleLogin} className="space-y-6" action="#">
           <h5 className="text-xl font-medium text-gray-900 dark:text-white">
             Sign in to our platform
@@ -92,7 +94,7 @@ const Login = () => {
               Lost Password?
             </a>
           </div>
-          <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button className="w-full text-white bg-blue-700 hover:bg-rose-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Login to your account
           </button>
           <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
@@ -105,11 +107,16 @@ const Login = () => {
           </div>
         </form>
         <div>
-          <button
-            className="btn bg-slate-950 btn-secondary"
+          <div
+            className="w-full btn  mt-4 flex gap-2 hover:bg-rose-400  mx-auto rounded-3xl bg-blue-600"
             onClick={handleGoogleLogin}>
-            Google
-          </button>
+            <span className="text-4xl items-center  flex gap-2 mx-auto">
+              <FcGoogle className="bg-white h-full  rounded-md" />
+              <h2 className="text-center font-medium  text-xl  text-white">
+                Sing up with Google
+              </h2>
+            </span>
+          </div>
         </div>
       </div>
       <ToastContainer />
