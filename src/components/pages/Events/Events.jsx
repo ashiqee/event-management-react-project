@@ -21,5 +21,5 @@ const Events = ({ events }) => {
 
 export default Events;
 Events.propTypes = {
-  events: PropTypes.object,
+  events: PropTypes.array,
 };

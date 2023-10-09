@@ -16,5 +16,5 @@ const EventsPage = ({ eData }) => {
 export default EventsPage;
 
 EventsPage.propTypes = {
-  eData: PropTypes.object,
+  eData: PropTypes.array,
 };
