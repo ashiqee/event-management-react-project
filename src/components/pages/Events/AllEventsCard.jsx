@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 const AllEventsCard = ({ e }) => {
   const { id, name, image, short_description } = e;
-  console.log(e.name);
+
   return (
     <div>
       <div className="md: max-w-screen-xl  mx-auto mt-2">
