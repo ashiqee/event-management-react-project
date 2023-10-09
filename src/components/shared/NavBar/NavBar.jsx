@@ -62,8 +62,10 @@ const NavBar = () => {
                 {navLinks}
               </ul>
             </div>
-            <a className="normal-case text-rose-400 text-5xl py-4">TecH.e</a>
-            <img className="w-12 h-12 rounded-full" src={logo} alt="" />
+            <Link className="flex items-center" to="/">
+              <a className="normal-case text-rose-400 text-5xl py-4">TecH.e</a>
+              <img className="w-12 h-12 rounded-full" src={logo} alt="" />
+            </Link>
           </div>
           <div className="navbar-center  hidden lg:flex gap-5">
             <ul className="menu menu-horizontal text-xl  px-1">{navLinks}</ul>

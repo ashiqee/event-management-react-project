@@ -31,6 +31,7 @@ const Payment = ({ event }) => {
 
   return (
     <div>
+      <ToastContainer />
       <div className="text-center">
         <h2 className="text-3xl font-medium">Give your payment information</h2>
         <img
@@ -38,9 +39,9 @@ const Payment = ({ event }) => {
           src="https://cdn.mypanel.link/l54p5v/42zr1n12uy0uy0zm.png"
           alt=""
         />
-        <form onSubmit={handleBooking}>
+        <form className="grid grid-cols-1 mx-10 gap-3" onSubmit={handleBooking}>
           <input
-            className="border p-2 rounded-lg mr-4"
+            className="border p-2 rounded-lg "
             type="text"
             name="number"
             placeholder="Mobile Number"
@@ -59,7 +60,6 @@ const Payment = ({ event }) => {
           </button>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 };
