@@ -32,7 +32,7 @@ const Payment = ({ event }) => {
   return (
     <div>
       <ToastContainer />
-      <div className="text-center">
+      <div className="text-center ">
         <h2 className="text-3xl font-medium">Give your payment information</h2>
         <img
           className="w-48 mx-auto p-4"

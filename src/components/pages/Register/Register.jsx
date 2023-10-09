@@ -70,7 +70,7 @@ const Register = () => {
 
   return (
     <div>
-      <div className="my-16">
+      <div className="my-12">
         <div className="w-full max-w-sm p-4 bg-transparent mx-auto bg-opacity-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
           <form onSubmit={handleRegister} className="space-y-6" action="#">
             <h5 className="text-xl font-medium text-gray-900 dark:text-white">
