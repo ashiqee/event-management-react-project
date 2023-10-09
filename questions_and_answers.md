@@ -20,7 +20,8 @@ console.log(greetign);
 
 #### Answer: A
 
-<i> This variable output show empty Object </i>
+<i> This variable output show empty Object. greetign spelling mistake. let greeting variable declare after greetign varibale value add object empty {}.
+console.log greetign and output show {} </i>
 
 </p>
 </details>
