@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,7 +7,8 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
-  // const { profileImg, setProfileImg } = useState();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const notify = () => toast.success("Registration Successfully!");
   const notifyProfile = () => toast.success("Profile Updated Successfully!");
@@ -63,6 +64,7 @@ const Register = () => {
       .then((res) => {
         console.log(res.user);
         notify();
+        navigate(location?.state ? location.state : "/");
 
         updateProfile(res.user, {
           displayName: name,
@@ -153,14 +155,16 @@ const Register = () => {
             </div>
             <button
               type="submit"
-              className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
               Register
             </button>
             <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
               Already registered? Please{" "}
               <Link
                 to="/login"
-                className="text-blue-700 hover:underline dark:text-blue-500">
+                className="text-blue-700 hover:underline dark:text-blue-500"
+              >
                 Login Here
               </Link>
             </div>

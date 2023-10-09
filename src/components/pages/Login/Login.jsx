@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,6 +8,8 @@ import { FcGoogle } from "react-icons/Fc";
 
 const Login = () => {
   const { signIn, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const notify = () => toast.success("Login Successfully!");
   const notifyGoogle = (e) => toast.success(e);
@@ -25,6 +27,7 @@ const Login = () => {
       .then((res) => {
         console.log(res.user);
         notify();
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -37,6 +40,7 @@ const Login = () => {
       .then((res) => {
         notify();
         notifyGoogle(res.user.displayName);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => notifyGoogleError(error.message));
   };
@@ -90,7 +94,8 @@ const Login = () => {
             </div>
             <a
               href="#"
-              className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">
+              className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
+            >
               Lost Password?
             </a>
           </div>
@@ -101,7 +106,8 @@ const Login = () => {
             Not registered?{" "}
             <Link
               to="/register"
-              className="text-blue-700 hover:underline dark:text-blue-500">
+              className="text-blue-700 hover:underline dark:text-blue-500"
+            >
               Create account
             </Link>
           </div>
@@ -109,7 +115,8 @@ const Login = () => {
         <div>
           <div
             className="w-full btn  mt-4 flex gap-2 hover:bg-rose-400  mx-auto rounded-3xl bg-blue-600"
-            onClick={handleGoogleLogin}>
+            onClick={handleGoogleLogin}
+          >
             <span className="text-4xl items-center  flex gap-2 mx-auto">
               <FcGoogle className="bg-white h-full  rounded-md" />
               <h2 className="text-center font-medium  text-xl  text-white">
