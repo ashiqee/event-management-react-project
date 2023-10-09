@@ -16,9 +16,8 @@ const AboutFea = () => {
       />
       <h2 className="md:text-9xl text-4xl font-semibold"> Welcome to TecH.e</h2>
 
-      <p className="text-lg font-light  mt-5">
+      <p className="text-lg font-light w-2/4 text-center mx-auto  mt-5">
         Explore the future of what is possible at TecH.e Join developers,
-        <br></br>
         creators, and designers to learn the latest tech, connect with experts,
         and get inspired.
       </p>

@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import Payment from "../../payment/Payment";
+
 const EventDetailsCard = ({ event }) => {
   const { name, image, price, short_description } = event;
 
@@ -69,12 +71,30 @@ const EventDetailsCard = ({ event }) => {
           </div>
 
           <div className="card-actions items-center justify-between ">
-            <button className="bg-gradient-to-br btn text-white from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <label
+              htmlFor="my_modal_6"
+              className="btn bg-gradient-to-br text-white from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+            >
               Get Ticket
-            </button>
+            </label>
             <h3 className="text-xl shadow-2xl  rounded-b-lg px-10 p-3 font-semibold text-rose-400 ">
               Speaker
             </h3>
+          </div>
+        </div>
+
+        {/* The button to open modal */}
+
+        {/* Put this part before </body> tag */}
+        <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box">
+            <Payment event={event} />
+            <div className="modal-action">
+              <label htmlFor="my_modal_6" className="btn">
+                Close!
+              </label>
+            </div>
           </div>
         </div>
       </div>

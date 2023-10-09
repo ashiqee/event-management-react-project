@@ -1,5 +1,5 @@
-import { useLoaderData } from "react-router-dom";
 import EventCard from "./EventCard";
+import PropTypes from "prop-types";
 
 const Events = ({ events }) => {
   return (
@@ -20,3 +20,6 @@ const Events = ({ events }) => {
 };
 
 export default Events;
+Events.propTypes = {
+  events: PropTypes.object,
+};

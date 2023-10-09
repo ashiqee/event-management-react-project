@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -33,14 +33,6 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const accept = e.target.terms.checked;
-
-    // if (profilePic) {
-    //   setProfileImg(
-    //     "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-    //   );
-    // } else {
-    //   setProfileImg(profilePic);
-    // }
 
     if (password.length < 6) {
       notifyPassword();
