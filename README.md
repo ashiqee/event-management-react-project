@@ -22,14 +22,12 @@ Welcome to the Tech Event Management Website! This project is designed to help y
 
 - [Features](#features)
 - [Development Stack](#development-stack)
-- [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Authentication](#authentication)
 - [Private Routes](#private-routes)
 - [JSON Data](#json-data)
 - [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -51,4 +49,29 @@ Welcome to the Tech Event Management Website! This project is designed to help y
 - **React Toasty:** Provides toast notifications for user feedback.
 - **Tailwind CSS:** A utility-first CSS framework for styling.
 - **Vite:** Fast and efficient development setup for React.
+
+
+## Project Structure
+
+The project adheres to a standard React application layout:
+
+- **src/components:** Reusable React components.
+- **src/components/pages:** Different pages of the application (Home, EventDetails, etc.).
+- **src/Router/routes:** Route configurations, including private routes.
+
+## Authentication
+
+Users can sign up and log in using their Google accounts. Firebase Authentication is seamlessly integrated to ensure a secure authentication process.
+
+## Private Routes
+
+The "Events Details+Schedule" page is a private route, allowing access only to authenticated users. Unauthorized users attempting to access this page will be redirected to the login page.
+
+## JSON Data
+
+Event cards and speaker information are dynamically loaded from JSON data, providing an efficient and easily manageable way to update event details.
+
+## Dependencies
+
+For a comprehensive list of project dependencies, please refer to the `package.json` file.
 
