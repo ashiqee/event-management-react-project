@@ -4,6 +4,57 @@
 
 Also Click here : [https://tech-e-auth.web.app/](https://tech-e-auth.web.app/)
 
+## New Feature: THREE.js View in Event Details Page - 13-12-2023
+
+### Overview
+
+The Event Details page now features an immersive THREE.js view related to the specific event. This view provides an interactive and visually engaging experience for users.
+
+### Implementation Steps
+
+1. **Event Details Page:**
+   - The Event Details page has been enhanced to include a dedicated section for the THREE.js view.
+
+2. **Integration with THREE.js:**
+   - The THREE.js library has been integrated into the project. (`npm install three`)
+
+3. **Loading 3D Model:**
+   - The THREE.js view loads a 3D model associated with the event using loaders provided by THREE.js.
+
+4. **Interactive Controls:**
+   - Users can interact with the 3D view through controls, including panning, zooming, and rotating.
+
+5. **Annotations or Information Overlay:**
+   - Relevant information or annotations are overlaid on the 3D view to provide additional context about the event.
+
+6. **Event-specific Customization:**
+   - The THREE.js view is customized based on event-specific data, adjusting colors, textures, or lighting as needed.
+
+7. **Responsive Design:**
+   - The 3D view is designed to be responsive, ensuring a seamless experience on various screen sizes.
+
+8. **Error Handling:**
+   - Robust error handling is implemented to handle cases where the 3D model or resources fail to load.
+
+9. **Performance Optimization:**
+   - The performance of the 3D view is optimized, including handling large models and implementing LOD where necessary.
+
+10. **Testing:**
+    - Thorough testing has been conducted on different browsers and devices to ensure a consistent user experience.
+
+11. **Documentation:**
+    - Project documentation has been updated to include information on using the new THREE.js feature.
+
+12. **User Feedback:**
+    - User feedback is encouraged to make iterative improvements to the THREE.js view.
+
+13. **Deployment:**
+    - The project, featuring the new THREE.js view, is deployed to the hosting environment.
+
+14. **User Education:**
+    - Tooltips and user education materials are provided to guide users on interacting with the THREE.js view.
+
+
 ### 🧮 Website Feature: Five Feature and functionalities in this Website.
 
 - This website is tech event management related.

@@ -3,6 +3,8 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import EventDetailsCard from "./EventDetailsCard";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import ThreeJs from "../../../EventView/ThreeJs";
+import EventView from "../../../EventView/EventView";
 
 const EventDetails = () => {
   const [event, setEvent] = useState({});
@@ -25,6 +27,10 @@ const EventDetails = () => {
   return (
     <div>
       <EventDetailsCard event={event} />
+      <div className="h-screen">
+        <EventView />
+      </div>
+      {/* <ThreeJs /> */}
     </div>
   );
 };
