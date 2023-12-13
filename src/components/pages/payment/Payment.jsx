@@ -1,8 +1,14 @@
+import { collection, addDoc } from "firebase/firestore";
+import { useContext } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Payment = ({ event }) => {
+  const { db, user } = useContext(AuthContext)
+
+  console.log(event);
   const notify = () =>
     toast.success(
       `${event.name}:
@@ -13,12 +19,31 @@ const Payment = ({ event }) => {
   const mobileNotify = () => toast.error("Please give mobile number");
   const transNotify = () => toast.error("Please give Transaction Id");
 
-  const handleBooking = (e) => {
+  const handleBooking = async (e) => {
+    e.preventDefault();
     const form = new FormData(e.currentTarget);
     const mobileNumber = form.get("number");
     const transactionId = form.get("transaction");
-    e.preventDefault();
+    const paymentData = {
+      userName: user?.displayName,
+      mobileNumber: mobileNumber,
+      transactionId: transactionId,
+      amount: event?.price,
+      eventId: event?.id,
+
+    }
+
     if (mobileNumber && transactionId) {
+
+      try {
+        const docRef = await addDoc(collection(db, "payments"), paymentData);
+        console.log("Payment Details:", docRef.id);
+
+
+      } catch (error) {
+        console.error("Error adding documnet", error);
+      }
+
       notify();
     } else {
       if (mobileNumber === "") {

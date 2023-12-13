@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { collection, getDocs } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 const Report = () => {
     const { db } = useContext(AuthContext)
@@ -29,7 +30,12 @@ const Report = () => {
         <div>
 
             {
-                paymentData?.map((payment, i) => <ul key={i} > <li className="text-xl text-blue-600"> {i + 1}.  {payment?.mobileNumber}  : {payment?.transactionId}</li>
+                paymentData?.map((payment, i) => <ul key={i} > <li className="text-xl text-blue-600">
+                    {i + 1}. {payment?.userName} - {payment?.mobileNumber}  :
+                    {payment?.transactionId}-
+                    {payment?.amount}- <Link to={`/event/${payment?.eventId}`}><button>Details Event</button></Link>
+
+                </li>
 
                 </ul>)
             }
