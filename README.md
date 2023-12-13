@@ -16,7 +16,11 @@ The Event Details page now features an immersive THREE.js view related to the sp
    - The Event Details page has been enhanced to include a dedicated section for the THREE.js view.
 
 2. **Integration with THREE.js:**
-   - The THREE.js library has been integrated into the project. (`npm install three`)
+   - The THREE.js library has been integrated into the project. (`"@react-spring/three": "^9.7.3",
+    "@react-three/drei": "^9.92.1",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/postprocessing": "^2.15.11",
+    "@use-gesture/react": "^10.3.0",`)
 
 3. **Loading 3D Model:**
    - The THREE.js view loads a 3D model associated with the event using loaders provided by THREE.js.
