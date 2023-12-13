@@ -1,14 +1,17 @@
 import { collection, addDoc } from "firebase/firestore";
 import { useContext } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+
 
 const Payment = ({ event }) => {
+  const navigate = useNavigate()
   const { db, user } = useContext(AuthContext)
 
-  console.log(event);
+  // console.log(event);
   const notify = () =>
     toast.success(
       `${event.name}:
@@ -43,7 +46,7 @@ const Payment = ({ event }) => {
       } catch (error) {
         console.error("Error adding documnet", error);
       }
-
+      navigate('/paymentsReport')
       notify();
     } else {
       if (mobileNumber === "") {

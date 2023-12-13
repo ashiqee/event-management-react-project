@@ -27,13 +27,13 @@ const Report = () => {
 
     // console.log(paymentData);
     return (
-        <div>
+        <div className="container mx-auto">
 
             {
                 paymentData?.map((payment, i) => <ul key={i} > <li className="text-xl text-blue-600">
                     {i + 1}. {payment?.userName} - {payment?.mobileNumber}  :
                     {payment?.transactionId}-
-                    {payment?.amount}- <Link to={`/event/${payment?.eventId}`}><button>Details Event</button></Link>
+                    {payment?.amount}- <Link to={`/event/${payment?.eventId}`}><button className="btn mb-2">Details Event</button></Link>
 
                 </li>
 
