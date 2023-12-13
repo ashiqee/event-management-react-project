@@ -12,6 +12,7 @@ import EventDetails from "../components/pages/Events/EventDetails/EventDetails";
 
 import Payment from "../components/pages/payment/Payment";
 import AllEvents from "./../components/pages/Events/AllEvents";
+import Report from "../components/pages/payment/PaymentsReport/Report";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: '/paymentsReport',
+        element: <Report />
       },
       {
         path: "/login",

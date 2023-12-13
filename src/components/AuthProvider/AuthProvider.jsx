@@ -11,11 +11,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import app from "../Firebase/firebase.config";
-
+import { getFirestore } from "firebase/firestore";
 const auth = getAuth(app);
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
+
+const db = getFirestore(app);
+
+// console.log(db);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -53,6 +57,7 @@ const AuthProvider = ({ children }) => {
   });
 
   const authInfo = {
+    db,
     user,
     createUser,
     googleLogin,
