@@ -4,7 +4,7 @@
 
 Also Click here : [https://tech-e-auth.web.app/](https://tech-e-auth.web.app/)
 
-## New Feature: THREE.js View in Event Details Page - 13-12-2023
+## New Feature: THREE.js View in Event Details Page and firestore impliment - 13-12-2023
 
 ### Overview
 
@@ -58,6 +58,12 @@ The Event Details page now features an immersive THREE.js view related to the sp
 14. **User Education:**
     - Tooltips and user education materials are provided to guide users on interacting with the THREE.js view.
 
+# Firebase project set up with Firestore
+- Firestore Integration
+ - getDoc Implementation
+ - addDoc Implementation
+
+### uses page: Event Details Get Ticket add Doc and Payment report page getDoc.
 
 ### 🧮 Website Feature: Five Feature and functionalities in this Website.
 

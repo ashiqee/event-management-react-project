@@ -29,16 +29,76 @@ const Report = () => {
     return (
         <div className="container mx-auto">
 
-            {
-                paymentData?.map((payment, i) => <ul key={i} > <li className="text-xl text-blue-600">
-                    {i + 1}. {payment?.userName} - {payment?.mobileNumber}  :
-                    {payment?.transactionId}-
-                    {payment?.amount}- <Link to={`/event/${payment?.eventId}`}><button className="btn mb-2">Details Event</button></Link>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th>
+                                <label>
+                                    #
+                                </label>
+                            </th>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>TransactionId</th>
+                            <th>Amount</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {/* row 1 */}
 
-                </li>
 
-                </ul>)
-            }
+                        {
+                            paymentData?.map((payment, i) =>
+
+                                <tr key={i}>
+                                    <th>
+                                        <label>
+                                            {i + 1}
+                                        </label>
+                                    </th>
+
+
+                                    <td>
+
+                                        <div className="flex items-center gap-3">
+                                            {/* <div className="avatar">
+                                                <div className="mask mask-squircle w-12 h-12">
+                                                    <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div> */}
+                                            <div>
+                                                <div className="font-bold">{payment?.userName} </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        {payment?.mobileNumber}
+
+                                    </td>
+                                    <td>   {payment?.transactionId}</td>
+                                    <td>    {payment?.amount}</td>
+                                    <th>
+                                        <Link to={`/event/${payment?.eventId}`}><button className="btn btn-xs mb-2">Details Event</button></Link>
+                                    </th>
+                                </tr>
+
+                            )
+                        }
+
+
+
+
+                    </tbody>
+
+
+                </table>
+            </div>
+
+
 
         </div>
     );

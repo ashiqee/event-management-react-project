@@ -20,7 +20,7 @@ const NavBar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/events/">Events</NavLink>
+        <NavLink to="/events">Events</NavLink>
       </li>
 
       <li>
@@ -92,6 +92,12 @@ const NavBar = () => {
                           {user.displayName}
                         </p>
                         <span className="badge">New</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a className="justify-between mb-5 items-center">
+                        <Link to={`/paymentsReport`}><button className="btn btn-xs mb-2">Payment Reports</button></Link>
+
                       </a>
                     </li>
 
