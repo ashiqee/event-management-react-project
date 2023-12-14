@@ -12,7 +12,7 @@ const SpeakersCard = ({ speakers }) => {
     <div>
       <div
         data-aos="flip-right"
-        className="card w-full h-[650px] bg-base-100 shadow-xl  image-full">
+        className="card mb-20 w-full h-[650px] bg-base-100 shadow-xl  image-full">
         <figure>
           <img className="object-cover" src={profile_pic} alt={speaker_name} />
         </figure>

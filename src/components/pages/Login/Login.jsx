@@ -120,7 +120,7 @@ const Login = () => {
             <span className="text-4xl items-center  flex gap-2 mx-auto">
               <FcGoogle className="bg-white h-full  rounded-md" />
               <h2 className="text-center font-medium  text-xl  text-white">
-                Sing up with Google
+                Sign Up with Google
               </h2>
             </span>
           </div>
