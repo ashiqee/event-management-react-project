@@ -12,6 +12,7 @@ import { useState } from "react";
 import { createContext } from "react";
 import app from "../Firebase/firebase.config";
 import { getFirestore } from "firebase/firestore";
+
 const auth = getAuth(app);
 
 export const AuthContext = createContext(null);
@@ -24,6 +25,8 @@ const db = getFirestore(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+
 
   const createUser = (email, password) => {
     setLoading(true);

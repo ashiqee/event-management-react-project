@@ -2,11 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import logo from "../../../assets/video/logo.gif";
+import Loading from "../../Loading/Loading";
 
 const NavBar = () => {
   const { logOut, user, loading } = useContext(AuthContext);
   if (loading) {
-    return <span className="loading  loading-ball loading-xs"></span>;
+    return <> <Loading /> </>
   }
   const handleLogOut = () => {
     logOut()
